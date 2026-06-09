@@ -1,47 +1,4 @@
 rm(list=ls());    # Clear out the Environment    
-  
-# create three variables: d, t, and v
-# give d and t values and use them to calculate v
-d = 100;   # assign d the value 100
-t = 20;
-v = d/t;   # use d to calculate v
-
-d = 400;   # re-assigns d to 400
-rm(list=ls());    # Clear out the Environment    
-  
-# create three variables: d, t, and v
-# give d and t values and use them to calculate v
-d = 100; # assign d the value 100
-t = 20;
-v = d/t; # use d to calculate v
-
-d = 400; # re-assigns d to 400
-v = d/t; # re-assign v using the new value of d
-rm(list=ls());    # Clear out the Environment    
- 
-# create three variables: Distance, Time, Volocity 
-
-# Distance in (meters)
-Distance = c(400, 400)
-
-# Time (seconds)
-Time= c(127,140)
-
-
-# Runner Volocity (meters/second)
-Runner_Volocity_MS = Distance / Time
-
-
-# Runner Volocity (Miles/Hour)
-Runner_Volocity_MPH = Runner_Volocity_MS *2.23694
-
-# to View Results
-Runner_Volocity_MPH
-Runner_Volocity_MS
-
-# Make a Reuslts Table
-Results = data.frame(Distance_M = Distance, Time_S = Time, Runner_Volocity_MS = Runner_Volocity_MS, Runner_Volocity_MPH = Runner_Volocity_MPH)
-rm(list=ls());    # Clear out the Environment    
 
  convert_speed <- function(distance_m, time_s){
 
