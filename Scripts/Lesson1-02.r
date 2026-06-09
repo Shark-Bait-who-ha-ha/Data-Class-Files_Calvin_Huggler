@@ -41,6 +41,7 @@ Runner_Volocity_MS
 
 # Make a Reuslts Table
 Results = data.frame(Distance_M = Distance, Time_S = Time, Runner_Volocity_MS = Runner_Volocity_MS, Runner_Volocity_MPH = Runner_Volocity_MPH)
+rm(list=ls());    # Clear out the Environment    
 
  convert_speed <- function(distance_m, time_s){
 
@@ -58,3 +59,4 @@ Runner_2_Random_Time = sample(100:150, 1)
 
 convert_speed(Runner_1_Random_Distance,Runner_1_Random_Time) 
 convert_speed(Runner_2_Random_Distance,Runner_2_Random_Time) 
+
