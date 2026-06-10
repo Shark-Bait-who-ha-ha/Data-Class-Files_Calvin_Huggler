@@ -1,9 +1,10 @@
 rm(list=ls());          # clean out the environment
 
 # Create this sequence: 13, 9, 5, 1, -3, -7, -11 using seq(). Come up with two more ways (three in all)
-Seq_1A = seq(13,-11,-4)
-Seq_1B = seq(13,-11,,7)
-Seq_1C = seq(13,,-4,7)
+Seq_1A = seq(from=13,to=-11,by=-4)
+Seq_1B = seq(from=13,to=-11,,length.out=7)
+Seq_1C = seq(from=13,by=-4,,length.out=7)
+print(c(Seq_1A,Seq_1B,Seq_1C))
 
 # Explain, in comments, why you get an error if you try to use all four arguments in seq(): from, by, to, length.out
     # to many arguments in the system makes it ambiguis and R dosent know hoe to reconstruct the formula
@@ -16,8 +17,8 @@ Seq_1C = seq(13,,-4,7)
 
 #Find the log (base 5) of this vector: c(0.04, 0.2, 25, 125) using the log() function
 Vec1 = c(0.04,0.2,25,125)
-Vector_log = log(Vec1,5)
-round(Vector_log)
+Vector_log = log(Vec1,base=5)
+print(round(Vector_log))
 
 # Open Weather data with commas
 WD_Comma= read.csv(file= "Data/twoWeekWeatherData_Comma.csv",
@@ -32,13 +33,14 @@ NoonCond= WD_Comma$noonCondition
 # Call the function factor() twice, passing in (1) the column date and (2) the column noonCondition as the argument and answer the following in comments:
 rainyDay_Fac= factor(rainyDay)
 NoonCond_Fac= factor(NoonCond)
+print(c(rainyDay_Fac,NoonCond_Fac))
 
 # How many factors levels does the noonCondition column have? 
 NoonCon_Fac_Lvls= nlevels(NoonCond_Fac) # 5 lvlS
-
+print(NoonCon_Fac_Lvls)
 #How many factors levels does the date column have?
 rainyDay_Fac_lvls= nlevels(rainyDay_Fac) # 14 lvls
-
+print(rainyDay_Fac_lvls)
 
 # #What is a factor level?
-# a unique catigory withing a factor
+# a unique catigory within a factor

@@ -9,11 +9,12 @@ rm(list=ls());    # Clear out the Environment
   cat("Runner Velocity:", round(velocity_mph,2), "mph\n")
 }
 # Picking a Random Number for Distance (1000m - 2000m),  and Time (100s - 150s) 
-Runner_1_Random_Distance= sample(1000:2000, 1)
-Runner_1_Random_Time = sample(100:150, 1)
-Runner_2_Random_Distance= sample(1000:2000, 1)
-Runner_2_Random_Time = sample(100:150, 1)
+  Runner_1_Random_Distance= sample(1000:2000, 1)
+  Runner_1_Random_Time = sample(100:150, 1)
+  Runner_2_Random_Distance= sample(1000:2000, 1)
+  Runner_2_Random_Time = sample(100:150, 1)
 
 convert_speed(Runner_1_Random_Distance,Runner_1_Random_Time) 
 convert_speed(Runner_2_Random_Distance,Runner_2_Random_Time) 
 
+  

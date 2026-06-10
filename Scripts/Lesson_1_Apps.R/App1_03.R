@@ -35,12 +35,12 @@ Data_Set_Std
 Number_Challenge= sample(0:99,1)/100
 
 # Number Results 
-Number_1
-Number_2
-Number_3
-Number_4
-Number_5
-Data_Set_M
-Data_Set_V
-Data_Set_Std
-Number_Challenge
+print(Number_1)
+print(Number_2)
+print(Number_3)
+print(Number_4)
+print(Number_5)
+print(Data_Set_M)
+print(Data_Set_V)
+print(Data_Set_Std)
+print(Number_Challenge)
