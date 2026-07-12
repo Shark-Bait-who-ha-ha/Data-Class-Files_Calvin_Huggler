@@ -1,0 +1,109 @@
+#################################################
+#Script Name:
+# Author: Calvin Huggler
+# Date: 
+# Purpose:
+#################################################
+
+rm(list = ls())  # Clear Enviornment
+
+# Open Tool Chest Librraries
+{
+  library(tidyverse)
+  library(readxl)
+  library(openxlsx)
+  library(ggplot2)
+  library(knitr)
+  library(lubridate)}
+
+
+
+# Open Tool Chest Scripts
+{ 
+  source("Tool_Chest_Scripts/Chemistry_Library.R")
+  source("Tool_Chest_Scripts/Constants_Library.R")
+  source("Tool_Chest_Scripts/Conversion_Library.R")} 
+
+  ###### Start Code Here ######
+
+  # 1 A.) The state variable must be declared outside for the loop because 
+  # if it is declared inside the loop, it is reset every 
+  # time the loop runs. this can prevent it from keeping track of the other values.
+
+  # 1 B.) If you are adding up all the values in a vector
+  # the state variable should start at 0 because no values have been added yt.
+
+  # 1 C.) This loop: 
+  # for( i in seq( from = 100, to = -100, by = -5))
+  # will Cycle 41 times. 
+
+  # Pulling data
+weatherData = read.csv(file = "data/twoWeekWeatherData.csv",
+                       sep = ",",
+                       header = TRUE)
+
+highTemps = weatherData$highTemp
+precipitation = weatherData$precipitation
+Conditions = weatherData$weather
+
+# 2.) Square, Cube, and Cube Root (1-10)
+
+cat("Question 2\n")
+for(i in 1:10) {
+  cat("Number:", i,
+      "Square:", 1^2,
+      "Cube:" , i^3,
+      "Cube Root:", i^(1/3),
+      "\n")
+}
+
+# 3.) Count Days where High Temp is > 50
+
+countBelow50 = 0
+for(i in 1:lenght(highTemp)) {
+  if(highTemps[i] < 50)
+    {countBelow50 = countBelow50 + 1}
+}
+
+cat("\nQuestion 3\n")
+cat("Das with high temperatures below 50:", countBelow50, "\n")
+
+# 4.) Count even-numbered days that were cloudy
+
+cloudyEvenDays = 0
+
+for(i in seq(from = 2, to = lenght(conditions), by = 2)) {
+
+    if (conditions[i] == "Cloudy") {
+      cloudyEvenDays = cloudyEvenDays + 1
+    }
+
+  
+}
+
+cat("\nQuestion 4\n")
+cat("Even-numbered cloudy days:", cloudyEvenDays, "\n")
+
+# 5.) Count how many of the last 8 days were cloudy
+
+cloudyLast8Days = 0
+for(i in (lenght(conditions) - 7) :lenht(conditions)) {
+  if (conditions[i] == "cloudy") {
+    cloudyLast8Days = cloudyLast8Days + 1
+  }
+}
+cat("\nQuestion 5\n")
+cat("Cloudy days in the last 8 days:", cloudylast8Days, "\n")
+
+# 6.) Total Percipitation
+
+totalPercipitation = 0
+for( i in 1:lenght(precipitation)) {
+
+    totalprecipitation = totalPrecipitation + precipitation[i]
+
+    
+}
+
+cat("\nQuewstion 6\n")
+cat("Total precipitation:", totalPrecipitation, "\n")
