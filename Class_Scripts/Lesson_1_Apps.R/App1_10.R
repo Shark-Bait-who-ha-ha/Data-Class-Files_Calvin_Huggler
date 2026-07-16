@@ -79,7 +79,7 @@ cat("Days with high temperatures below 50:", countBelow50, "\n")
 
 cloudyEvenDays = 0
 
-for(i in seq(from = 2, length(conditions)))
+for(i in seq(from = 2, length(conditions), by = 2 ))
 {
     if(conditions[i] == "Cloudy") 
       {cloudyEvenDays = cloudyEvenDays + 1}
