@@ -1,9 +1,13 @@
 #################################################
-#Script Name:
+#Script Name: App1_10.R
 # Author: Calvin Huggler
-# Date: 
-# Purpose:
+# Cration Date: 7/10/26
+# Last Edit Date: 7/16/26
+# Purpose: Data Class Assignment
 #################################################
+
+# file = C:/Users/chugg/OneDrive/Desktop/Data Class Files/ Add your next final pathway to set and files
+
 
 rm(list = ls())  # Clear Enviornment
 
@@ -16,15 +20,16 @@ rm(list = ls())  # Clear Enviornment
   library(knitr)
   library(lubridate)}
 
-
-
-# Open Tool Chest Scripts
-{ 
-  source("Tool_Chest_Scripts/Chemistry_Library.R")
-  source("Tool_Chest_Scripts/Constants_Library.R")
-  source("Tool_Chest_Scripts/Conversion_Library.R")} 
-
+# Open Tool Chest Scripts as needed removve # symbol
+#{ 
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Chemistry_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Constants_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Conversion_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Packages_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Unicode_Characters_Library.R")
+#}
   ###### Start Code Here ######
+
 
   # 1 A.) The state variable must be declared outside for the loop because 
   # if it is declared inside the loop, it is reset every 
@@ -38,18 +43,19 @@ rm(list = ls())  # Clear Enviornment
   # will Cycle 41 times. 
 
   # Pulling data
-weatherData = read.csv(file = "data/twoWeekWeatherData.csv",
+weatherData = read.csv(file = "C:/Users/chugg/OneDrive/Desktop/Data Class Files/Class_Data_Sets/twoWeekWeatherData.csv",
                        sep = ",",
                        header = TRUE)
 
-highTemps = weatherData$highTemp
+highTemp = weatherData$highTemp
 precipitation = weatherData$precipitation
-Conditions = weatherData$weather
+conditions = weatherData$noonCondition
 
 # 2.) Square, Cube, and Cube Root (1-10)
 
 cat("Question 2\n")
-for(i in 1:10) {
+for(i in 1:10) 
+{
   cat("Number:", i,
       "Square:", 1^2,
       "Cube:" , i^3,
@@ -60,25 +66,23 @@ for(i in 1:10) {
 # 3.) Count Days where High Temp is > 50
 
 countBelow50 = 0
-for(i in 1:lenght(highTemp)) {
-  if(highTemps[i] < 50)
+for(i in 1:length(highTemp))
+{
+  if(highTemp[i] < 50)
     {countBelow50 = countBelow50 + 1}
 }
 
 cat("\nQuestion 3\n")
-cat("Das with high temperatures below 50:", countBelow50, "\n")
+cat("Days with high temperatures below 50:", countBelow50, "\n")
 
 # 4.) Count even-numbered days that were cloudy
 
 cloudyEvenDays = 0
 
-for(i in seq(from = 2, to = lenght(conditions), by = 2)) {
-
-    if (conditions[i] == "Cloudy") {
-      cloudyEvenDays = cloudyEvenDays + 1
-    }
-
-  
+for(i in seq(from = 2, length(conditions)))
+{
+    if(conditions[i] == "Cloudy") 
+      {cloudyEvenDays = cloudyEvenDays + 1}
 }
 
 cat("\nQuestion 4\n")
@@ -87,23 +91,22 @@ cat("Even-numbered cloudy days:", cloudyEvenDays, "\n")
 # 5.) Count how many of the last 8 days were cloudy
 
 cloudyLast8Days = 0
-for(i in (lenght(conditions) - 7) :lenht(conditions)) {
-  if (conditions[i] == "cloudy") {
-    cloudyLast8Days = cloudyLast8Days + 1
-  }
+for(i in (length(conditions) - 7) :length(conditions)) 
+{
+  if (conditions[i] == "Cloudy") 
+    {cloudyLast8Days = cloudyLast8Days + 1}
 }
+
 cat("\nQuestion 5\n")
-cat("Cloudy days in the last 8 days:", cloudylast8Days, "\n")
+cat("Cloudy days in the last 8 days:", cloudyLast8Days, "\n")
 
 # 6.) Total Percipitation
 
-totalPercipitation = 0
-for( i in 1:lenght(precipitation)) {
-
-    totalprecipitation = totalPrecipitation + precipitation[i]
-
-    
+totalPrecipitation = 0
+for( i in 1:length(precipitation)) 
+{
+    totalPrecipitation = totalPrecipitation + precipitation[i]
 }
 
 cat("\nQuewstion 6\n")
-cat("Total precipitation:", totalPrecipitation, "\n")
+cat("Total Precipitation:", totalPrecipitation, "\n")

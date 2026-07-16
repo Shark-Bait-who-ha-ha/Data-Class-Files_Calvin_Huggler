@@ -1,6 +1,37 @@
-"Fresh_Start.R"
+#################################################
+#Script Name: App1_08.R
+# Author: Calvin Huggler
+# Cration Date: --
+# Last Edit Date: 7/16/26
+# Purpose: Data Class Assignment
+#################################################
 
+# file = C:/Users/chugg/OneDrive/Desktop/Data Class Files/ Add your next final pathway to set and files
+
+
+rm(list = ls())  # Clear Enviornment
+
+# Open Tool Chest Librraries
+{
+  library(tidyverse)
+  library(readxl)
+  library(openxlsx)
+  library(ggplot2)
+  library(knitr)
+  library(lubridate)}
+
+# Open Tool Chest Scripts as needed removve # symbol
+#{ 
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Chemistry_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Constants_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Conversion_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Packages_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Unicode_Characters_Library.R")
+#}
+  ###### Start Code Here ######\
 # Pull File 
+
+
 weatherData = read.csv( file = "data/twoWeekWeatherData.csv",
                         sep = ",",
                        header = TRUE)

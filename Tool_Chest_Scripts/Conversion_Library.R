@@ -7,7 +7,6 @@
 ########################
 # DISTANCE
 ########################
-
 Convert_Distance_Meter_to_Inches <- function(x)
 {
   return(x * 39.3701)

@@ -1,0 +1,5 @@
+11th day: Apr6 Precipitation: 1.13 
+ Difference in precipitation between days 3 and 4: -1.07 
+ Every 3rd day's precipitation: 0.04 0 0.45 0.004 
+ Precipitation for days 12, 9, and 4: 0.004 0.45 1.11 
+ Total precipitation for the first 10 days: 2.53 

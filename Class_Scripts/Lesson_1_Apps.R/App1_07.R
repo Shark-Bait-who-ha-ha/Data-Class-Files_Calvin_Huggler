@@ -1,7 +1,37 @@
-rm(list=ls())    # Clear the Environment
+#################################################
+#Script Name: App1_07.R
+# Author: Calvin Huggler
+# Cration Date: --
+# Last Edit Date: 7/16/26
+# Purpose: Data Class Assignment
+#################################################
+
+# file = C:/Users/chugg/OneDrive/Desktop/Data Class Files/ Add your next final pathway to set and files
+
+
+rm(list = ls())  # Clear Enviornment
+
+# Open Tool Chest Librraries
+{
+  library(tidyverse)
+  library(readxl)
+  library(openxlsx)
+  library(ggplot2)
+  library(knitr)
+  library(lubridate)}
+
+# Open Tool Chest Scripts as needed removve # symbol
+#{ 
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Chemistry_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Constants_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Conversion_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Packages_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Unicode_Characters_Library.R")
+#}
+  ###### Start Code Here ######
 
 ### Read in the weather data
-weatherData = read.csv(file = "data/twoWeekWeatherData.csv",
+weatherData = read.csv(file = "C:/Users/chugg/OneDrive/Desktop/Data Class Files/Class_Data_sets/twoWeekWeatherData.csv",
                        sep = ",",
                        header = TRUE)
 
@@ -77,10 +107,10 @@ cat(
   weatherData$precipitation[9] +
   weatherData$precipitation[10],
   "\n",
-  file = "data/output.txt"
+  file = "C:/Users/chugg/OneDrive/Desktop/Data Class Files/Class_Text_Outputs/1_07A_App_output.txt"
 )
 
 # E. Append your name and three Unicode characters
-cat("\nCalvin Huggler \u2605 \u2713 \u263A\n",
-    file = "data/output.txt",
+cat("\n Calvin Huggler \u2605 \u2713 \u263A\n",
+    file = "/Users/chugg/OneDrive/Desktop/Data Class Files/Class_Text_Outputs/1_07B_App_output.txt",
     append = TRUE)

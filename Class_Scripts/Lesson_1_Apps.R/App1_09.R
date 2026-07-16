@@ -1,4 +1,34 @@
-rm(list = ls())    # Clear the Environment
+#################################################
+#Script Name: App1_09.R
+# Author: Calvin Huggler
+# Cration Date: 7/04/2026
+# Last Edit Date: 7/16/26
+# Purpose: Data Class Assignment
+#################################################
+
+# file = C:/Users/chugg/OneDrive/Desktop/Data Class Files/ Add your next final pathway to set and files
+
+
+rm(list = ls())  # Clear Enviornment
+
+# Open Tool Chest Librraries
+{
+  library(tidyverse)
+  library(readxl)
+  library(openxlsx)
+  library(ggplot2)
+  library(knitr)
+  library(lubridate)}
+
+# Open Tool Chest Scripts as needed removve # symbol
+#{ 
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Chemistry_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Constants_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Conversion_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Packages_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Unicode_Characters_Library.R")
+#}
+  ###### Start Code Here ######
 
 # A.) the fourth condition (hightTemps[3]  40) only checks the values between 41 and 50 because all of the 
 # values greater then 50 have alreadyy been caught 

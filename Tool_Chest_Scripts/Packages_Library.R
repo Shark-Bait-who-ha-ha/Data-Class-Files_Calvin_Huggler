@@ -1,21 +1,13 @@
 #################################################
+#Script Name: Delivery_Man_Script.R
+# Author: Calvin Huggler
+# Date: 7/16/2026
+# Purpose:Creates toolChest to load Needed packages for Diffrent jobs
 
-# BioWorks / School Package Installer
-
-# Run ONCE per R installation
-
-#################################################
-
-# Choose a CRAN mirror
-
-options(repos = c(CRAN = "https://cloud.r-project.org"))
 
 #################################################
-
 # CORE R / DATA SCIENCE
-
 #################################################
-
 install.packages(c(
 "tidyverse",
 "dplyr",
@@ -26,13 +18,9 @@ install.packages(c(
 "purrr",
 "tibble"
 ))
-
 #################################################
-
 # PLOTTING
-
 #################################################
-
 install.packages(c(
 "ggplot2",
 "ggthemes",
@@ -42,13 +30,9 @@ install.packages(c(
 "scales",
 "viridis"
 ))
-
 #################################################
-
 # STATISTICS
-
 #################################################
-
 install.packages(c(
 "car",
 "MASS",
@@ -57,36 +41,24 @@ install.packages(c(
 "lmtest",
 "multcomp"
 ))
-
 #################################################
-
 # EXCEL / FILES
-
 #################################################
-
 install.packages(c(
 "readxl",
 "openxlsx",
 "writexl",
 "janitor"
 ))
-
 #################################################
-
 # DATES / TIMES
-
 #################################################
-
 install.packages(c(
 "lubridate"
 ))
-
 #################################################
-
 # REPORTS / QUARTO / PDF
-
 #################################################
-
 install.packages(c(
 "knitr",
 "rmarkdown",
@@ -94,62 +66,42 @@ install.packages(c(
 "kableExtra",
 "tinytex"
 ))
-
 #################################################
-
 # TABLES
-
 #################################################
-
 install.packages(c(
 "gt",
 "flextable",
 "DT"
 ))
-
 #################################################
-
 # SCIENTIFIC WORK
-
 #################################################
-
 install.packages(c(
 "units",
 "pracma",
 "matrixStats"
 ))
-
 #################################################
-
 # QUALITY OF LIFE
-
 #################################################
-
 install.packages(c(
 "here",
 "fs",
 "cli"
 ))
-
 #################################################
-
 # INSTALL LATEX FOR PDFs
-
 #################################################
-
 if(!requireNamespace("tinytex", quietly = TRUE))
 {
 install.packages("tinytex")
 }
 
 tinytex::install_tinytex()
-
 #################################################
-
 # TEST LOAD
-
 #################################################
-
 library(tidyverse)
 library(ggplot2)
 library(readxl)
@@ -157,7 +109,6 @@ library(openxlsx)
 library(knitr)
 library(rmarkdown)
 library(quarto)
-
 cat("===================================\n")
 cat(" BioWorks R Environment Ready\n")
 cat("===================================\n")

@@ -1,7 +1,37 @@
-rm(list=ls());                         # clear Environment
-library(package=ggplot2);              # include all GGPlot2 functions
+#################################################
+#Script Name: App1_01.R
+# Author: Calvin Huggler
+# Cration Date: --
+# Last Edit Date: 7/16/26
+# Purpose: Data Class Assignment
+#################################################
 
-weatherData = read.csv(file="data/Setup.csv");
+# file = C:/Users/chugg/OneDrive/Desktop/Data Class Files/ Add your next final pathway to set and files
+
+
+rm(list = ls())  # Clear Enviornment
+
+# Open Tool Chest Librraries
+{
+  library(tidyverse)
+  library(readxl)
+  library(openxlsx)
+  library(ggplot2)
+  library(knitr)
+  library(lubridate)}
+
+# Open Tool Chest Scripts as needed removve # symbol
+#{ 
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Chemistry_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Constants_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Conversion_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Packages_Library.R")
+  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Unicode_Characters_Library.R")
+#}
+  ###### Start Code Here ##########
+
+
+weatherData = read.csv(file="C:/Users/chugg/OneDrive/Desktop/Data Class Files/Class_Data_sets/Setup.csv");
 
 #### Labels for the facets of the plot
 windLabels = c(Low = "Light Winds",
