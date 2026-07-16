@@ -6,9 +6,6 @@
 # Purpose: Data Class Assignment
 #################################################
 
-# file = C:/Users/chugg/OneDrive/Desktop/Data Class Files/ Add your next final pathway to set and files
-
-
 rm(list = ls())  # Clear Enviornment
 
 # Open Tool Chest Librraries
@@ -22,17 +19,18 @@ rm(list = ls())  # Clear Enviornment
 
 # Open Tool Chest Scripts as needed removve # symbol
 #{ 
-  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Chemistry_Library.R")
-  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Constants_Library.R")
-  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Conversion_Library.R")
-  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Packages_Library.R")
-  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Unicode_Characters_Library.R")
+  # source("Tool_Chest_Scripts/Chemistry_Library.R")
+  # source("Tool_Chest_Scripts/Constants_Library.R")
+  # source("Tool_Chest_Scripts/Conversion_Library.R")
+  # source("Tool_Chest_Scripts/Packages_Library.R")
+  # source("Tool_Chest_Scripts/Unicode_Characters_Library.R")
 #}
-  ###### Start Code Here ######\
+  ###### Start Code Here ######
+   
 # Pull File 
 
 
-weatherData = read.csv( file = "data/twoWeekWeatherData.csv",
+weatherData = read.csv( file = "Class_Data_Sets/twoWeekWeatherData.csv",
                         sep = ",",
                        header = TRUE)
 
@@ -103,10 +101,7 @@ cat("\nRandom Temperature:", randomTemp, "\n")
 # D.) Random weather Condition
 
 weatherCondition = sample(
-  x = c("Cloudy", "Sunny", "Rainy", "Foggy"),
-  Size = 1
-)
-
+  x = c("Cloudy", "Sunny", "Rainy", "Foggy"), size = 1)
 cat( "Random Weather:", weatherCondition, "\n")
 
 # E. Nested If() Statments
@@ -118,7 +113,7 @@ if(randomTemp >= 60) {
   if (weatherCondition == "Sunny") {
     cat( "The weather is sunny an warm. \n")
   } else { 
-  cat( "The weather is warm but not sunny.\n")
+    cat( "The weather is warm but not sunny.\n")
   }
 
 } else {

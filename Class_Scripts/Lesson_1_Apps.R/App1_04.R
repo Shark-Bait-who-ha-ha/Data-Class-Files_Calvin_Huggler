@@ -5,10 +5,6 @@
 # Last Edit Date: 7/16/26
 # Purpose: Data Class Assignment
 #################################################
-
-# file = C:/Users/chugg/OneDrive/Desktop/Data Class Files/ Add your next final pathway to set and files
-
-
 rm(list = ls())  # Clear Enviornment
 
 # Open Tool Chest Librraries
@@ -20,19 +16,18 @@ rm(list = ls())  # Clear Enviornment
   library(knitr)
   library(lubridate)}
 
-# Open Tool Chest Scripts as needed removve # symbol 
-# {
-# source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Chemistry_Library.R")
-  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Constants_Library.R")
-  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Conversion_Library.R")
-  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Packages_Library.R")
-  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Unicode_Characters_Library.R")
-# }
+# Open Tool Chest Scripts as needed removve # symbol
+#{ 
+  # source("Tool_Chest_Scripts/Chemistry_Library.R")
+  # source("Tool_Chest_Scripts/Constants_Library.R")
+  # source("Tool_Chest_Scripts/Conversion_Library.R")
+  # source("Tool_Chest_Scripts/Packages_Library.R")
+  # source("Tool_Chest_Scripts/Unicode_Characters_Library.R")
 
-###### Start Code Here ######
+
 
 # A) Get the data from the twoWeekWeatherData CSV file
-weatherData =read.csv(file="C:/Users/chugg/OneDrive/Desktop/Data Class Files/Class_Data_sets/twoWeekWeatherData.csv", 
+weatherData =read.csv(file="Class_Data_sets/twoWeekWeatherData.csv", 
                        sep=",",
                        header=TRUE);  
 

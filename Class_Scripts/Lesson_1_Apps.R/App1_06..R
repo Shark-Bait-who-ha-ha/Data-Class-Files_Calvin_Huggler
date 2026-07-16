@@ -6,9 +6,6 @@
 # Purpose: Data Class Assignment
 #################################################
 
-# file = C:/Users/chugg/OneDrive/Desktop/Data Class Files/ Add your next final pathway to set and files
-
-
 rm(list = ls())  # Clear Enviornment
 
 # Open Tool Chest Librraries
@@ -22,13 +19,14 @@ rm(list = ls())  # Clear Enviornment
 
 # Open Tool Chest Scripts as needed removve # symbol
 #{ 
-  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Chemistry_Library.R")
-  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Constants_Library.R")
-  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Conversion_Library.R")
-  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Packages_Library.R")
-  # source("C:/Users/chugg/OneDrive/Desktop/Data Class Files/Tool_Chest_Scripts/Unicode_Characters_Library.R")
+  # source("Tool_Chest_Scripts/Chemistry_Library.R")
+  # source("Tool_Chest_Scripts/Constants_Library.R")
+  # source("Tool_Chest_Scripts/Conversion_Library.R")
+  # source("Tool_Chest_Scripts/Packages_Library.R")
+  # source("Tool_Chest_Scripts/Unicode_Characters_Library.R")
 #}
   ###### Start Code Here ######
+   
 ### Output a text message
 cat("Hello"); 
 
@@ -41,12 +39,12 @@ cat("How are you?\n");
 cat("I am fine?\n");
   
 ### read in data from  twoWeekWeatherData.csv
-weatherData = read.csv(file="C:/Users/chugg/OneDrive/Desktop/Data Class Files/Class_Data_sets/twoWeekWeatherData.csv", 
+weatherData = read.csv(file="Class_Data_sets/twoWeekWeatherData.csv", 
                        sep=",",
                        header=TRUE);  
   
 ### same command as above on one line (a little harder to read)
-weatherData2 = read.csv(file="C:/Users/chugg/OneDrive/Desktop/Data Class Files/Class_Data_sets/twoWeekWeatherData.csv", sep=",", header=TRUE);
+weatherData2 = read.csv(file="Class_Data_sets/twoWeekWeatherData.csv", sep=",", header=TRUE);
 
 
 
