@@ -30,7 +30,7 @@ rm(list = ls())  # Clear Enviornment
 # Pull File 
 
 
-weatherData = read.csv( file = "Class_Data_Sets/twoWeekWeatherData.csv",
+weatherData = read.csv( file = "Data/twoWeekWeatherData.csv",
                         sep = ",",
                        header = TRUE)
 

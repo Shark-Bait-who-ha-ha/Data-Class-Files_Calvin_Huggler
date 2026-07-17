@@ -39,12 +39,12 @@ cat("How are you?\n");
 cat("I am fine?\n");
   
 ### read in data from  twoWeekWeatherData.csv
-weatherData = read.csv(file="Class_Data_sets/twoWeekWeatherData.csv", 
+weatherData = read.csv(file="Data/twoWeekWeatherData.csv", 
                        sep=",",
                        header=TRUE);  
   
 ### same command as above on one line (a little harder to read)
-weatherData2 = read.csv(file="Class_Data_sets/twoWeekWeatherData.csv", sep=",", header=TRUE);
+weatherData2 = read.csv(file="Data/twoWeekWeatherData.csv", sep=",", header=TRUE);
 
 
 

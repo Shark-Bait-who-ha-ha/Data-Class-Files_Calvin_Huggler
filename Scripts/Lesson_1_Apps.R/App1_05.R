@@ -31,7 +31,7 @@ Vector_log = log(Vec1,base=5)
 print(round(Vector_log))
 
 # Open Weather data with commas
-WD_Comma= read.csv(file= "Data/twoWeekWeatherData_Comma.csv",
+WD_Comma= read.csv(file= "Data/twoWeekWeatherData.csv",
                     header= TRUE,
                     sep= " ",
                     dec= ",")

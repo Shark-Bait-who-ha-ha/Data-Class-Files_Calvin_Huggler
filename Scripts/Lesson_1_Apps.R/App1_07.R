@@ -28,7 +28,7 @@ rm(list = ls())  # Clear Enviornment
    
 
 ### Read in the weather data
-weatherData = read.csv(file = "Class_Data_sets/twoWeekWeatherData.csv",
+weatherData = read.csv(file = "Data/twoWeekWeatherData.csv",
                        sep = ",",
                        header = TRUE)
 
@@ -104,11 +104,11 @@ cat(
   weatherData$precipitation[9] +
   weatherData$precipitation[10],
   "\n",
-  file = "Class_Text_Outputs/1_07A_App_output.txt"
-)
+  file = "Text Files/1_07A_App_output.txt",
+  append = TRUE)
 
 # E. Append your name and three Unicode characters
 
 cat("\n Calvin Huggler \u2605 \u2713 \u263A\n",
-    file = "Class_Text_Outputs/1_07B_App_output.txt",
+    file = "Text Files/1_07B_App_output.txt",
     append = TRUE)
