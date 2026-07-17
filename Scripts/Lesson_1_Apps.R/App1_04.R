@@ -7,27 +7,8 @@
 #################################################
 rm(list = ls())  # Clear Enviornment
 
-# Open Tool Chest Librraries
-{
-  library(tidyverse)
-  library(readxl)
-  library(openxlsx)
-  library(ggplot2)
-  library(knitr)
-  library(lubridate)}
-
-# Open Tool Chest Scripts as needed removve # symbol
-#{ 
-  # source("Tool_Chest_Scripts/Chemistry_Library.R")
-  # source("Tool_Chest_Scripts/Constants_Library.R")
-  # source("Tool_Chest_Scripts/Conversion_Library.R")
-  # source("Tool_Chest_Scripts/Packages_Library.R")
-  # source("Tool_Chest_Scripts/Unicode_Characters_Library.R")
-
-
-
 # A) Get the data from the twoWeekWeatherData CSV file
-weatherData =read.csv(file="Class_Data_sets/twoWeekWeatherData.csv", 
+weatherData =read.csv(file="Data/twoWeekWeatherData.csv", 
                        sep=",",
                        header=TRUE);  
 
@@ -69,14 +50,14 @@ print(precipitation_neg)
 #E) Vector Math:Convert the precipitation column from inches to centimeters (2.54cm = 1in).
 precipitation_cm = round((precipitation*2.54),3)
 print(precipitation_cm)
+
 #F) Opening Data Frames:
-dowJonesData = read.csv(file='C:/Users/chugg/OneDrive/Desktop/Data Class Files/Class_Data_sets/DowJones1980_2012.csv',
-        header = FALSE,
+dowJonesData = read.csv(file = "Data/DowJones1980_2012.csv",
         sep = " ")
 par(bg= "black")
 
 par(fg= "white")
-plot(dowJonesData$V2,
+plot(dowJonesData,
   main = "Dow Jones Index Fund Data 1980-2012", 
   xlab = "Observation", 
   ylab = "Index Fund Value",

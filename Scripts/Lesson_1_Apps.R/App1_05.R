@@ -7,24 +7,7 @@
 #################################################
 rm(list = ls())  # Clear Enviornment
 
-# Open Tool Chest Librraries
-{
-  library(tidyverse)
-  library(readxl)
-  library(openxlsx)
-  library(ggplot2)
-  library(knitr)
-  library(lubridate)}
 
-# Open Tool Chest Scripts as needed removve # symbol
-#{ 
-  # source("Tool_Chest_Scripts/Chemistry_Library.R")
-  # source("Tool_Chest_Scripts/Constants_Library.R")
-  # source("Tool_Chest_Scripts/Conversion_Library.R")
-  # source("Tool_Chest_Scripts/Packages_Library.R")
-  # source("Tool_Chest_Scripts/Unicode_Characters_Library.R")
-#}
-  ###### Start Code Here ######
    
 
 # Create this sequence: 13, 9, 5, 1, -3, -7, -11 using seq(). Come up with two more ways (three in all)
@@ -48,7 +31,7 @@ Vector_log = log(Vec1,base=5)
 print(round(Vector_log))
 
 # Open Weather data with commas
-WD_Comma= read.csv(file= "Class_Data_sets/twoWeekWeatherData_Comma.csv",
+WD_Comma= read.csv(file= "Data/twoWeekWeatherData_Comma.csv",
                     header= TRUE,
                     sep= " ",
                     dec= ",")

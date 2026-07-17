@@ -1,17 +1,11 @@
-#################################################
-#Script Name: App1_01.R
-# Author: Calvin Huggler
-# Cration Date: --
-# Last Edit Date: 7/16/26
-# Purpose: Data Class Assignment
-#################################################
 
 rm(list = ls())  # Clear Enviornment
+library(ggplot2)
 
-  ###### Start Code Here ##########
 
-
-weatherData = read.csv(file = "Data/Setup.csv");
+weatherData =read.csv(file="Data/twoWeekWeatherData.csv", 
+                       sep=",",
+                       header=TRUE);
 
 #### Labels for the facets of the plot
 windLabels = c(Low = "Light Winds",
