@@ -6,32 +6,12 @@
 # Purpose: Data Class Assignment
 #################################################
 
-# file = Data Class Files/ Add your next final pathway to set and files
-
-
 rm(list = ls())  # Clear Enviornment
 
-# Open Tool Chest Librraries
-{
-  library(tidyverse)
-  library(readxl)
-  library(openxlsx)
-  library(ggplot2)
-  library(knitr)
-  library(lubridate)}
-
-# Open Tool Chest Scripts as needed removve # symbol
-#{ 
-  # source("Data Class Files/Tool_Chest_Scripts/Chemistry_Library.R")
-  # source("Data Class Files/Tool_Chest_Scripts/Constants_Library.R")
-  # source("Data Class Files/Tool_Chest_Scripts/Conversion_Library.R")
-  # source("Data Class Files/Tool_Chest_Scripts/Packages_Library.R")
-  # source("Data Class Files/Tool_Chest_Scripts/Unicode_Characters_Library.R")
-#}
   ###### Start Code Here ##########
 
 
-weatherData = read.csv(file = "Class_Data_sets/Setup.csv");
+weatherData = read.csv(file = "Data/Setup.csv");
 
 #### Labels for the facets of the plot
 windLabels = c(Low = "Light Winds",
