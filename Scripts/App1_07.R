@@ -104,11 +104,11 @@ cat(
   weatherData$precipitation[9] +
   weatherData$precipitation[10],
   "\n",
-  file = "Text Files/1_07A_App_output.txt",
-  append = TRUE)
+  file = "Text Files/1_07_App_output.txt",
+  append = FALSE)
 
 # E. Append your name and three Unicode characters
 
 cat("\n Calvin Huggler \u2605 \u2713 \u263A\n",
-    file = "Text Files/1_07B_App_output.txt",
+    file = "Text Files/1_07_App_output.txt",
     append = TRUE)

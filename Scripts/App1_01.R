@@ -1,6 +1,6 @@
 
 rm(list = ls())  # Clear Enviornment
-
+library(ggplot2)
 
 weatherData =read.csv(file="Data/Setup.csv", 
                        sep=",",
@@ -21,7 +21,7 @@ thePlot = ggplot(data=weatherData) +
                        "darkorchid3 ", rep("black", 3)),
                fill=c(rep(NA, 8), rep("red", 3), NA)) +
   theme_bw() +
-  facet_grid(rows=.~factor(windSpeedLevels,
+  facet_grid(rows=.~factor(windSpeedLevel,
                              levels=c("Low", "Medium", "High")),
              labeller=as_labeller(windLabels)) +
   scale_x_discrete(limits=c("North", "East", "South", "West")) +
